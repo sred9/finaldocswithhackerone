@@ -5,13 +5,13 @@ import GatsbyConfig from "../../gatsby-config";
 
 import Header from "../components/header/header";
 
-import "../fonts/effra/effra.scss";
-import "../fonts/material-icons/material-icons.scss";
-
 import "../css/main.scss";
+
+
 
 const TemplateWrapper = ({ children }) => (
   <div>
+  
     <Helmet
       defaultTitle={GatsbyConfig.siteMetadata.title}
       meta={[

@@ -91,7 +91,7 @@ class IndexRoute extends React.Component {
         : withPrefix(path);
 
     return (
-      <div className="row article">
+      <div className="article">
         <Helmet
           title={`${title} | ${GatsbyConfig.siteMetadata.title}`}
           meta={[
@@ -108,7 +108,7 @@ class IndexRoute extends React.Component {
           activeChild={findActiveChildByPath(globalWindow, links)}
           links={links}
         />
-		<div class="col-md-7 articlewrapper">
+
         <article className="article__inner">
           <ArticleSelect links={links} currentPath={globalWindow} />
 
@@ -136,14 +136,14 @@ class IndexRoute extends React.Component {
                           onClick={this.handleVote("up")}
                           className="upvote upvote--up"
                         >
-                          👍
+                          Yes
                         </a>{" "}
                         <a
                           href=""
                           onClick={this.handleVote("down")}
                           className="upvote upvote--down"
                         >
-                          👎
+                          No
                         </a>
                       </span>
                     )}
@@ -152,8 +152,8 @@ class IndexRoute extends React.Component {
 
                 <div className="footer-column footer-column--right">
                   <div className="footer-column-block">
-                    <a href="https://www.hackerone.com" target="_blank">
-                      Back to HackerOne
+                    <a href="/" target="_blank">
+                      Back to Home
                     </a>
                   </div>
                 </div>
@@ -161,7 +161,7 @@ class IndexRoute extends React.Component {
             </div>
           ) : null}
         </article>
-	</div>
+
         <ToC headings={headings} />
       </div>
     );

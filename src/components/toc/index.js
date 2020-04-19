@@ -12,10 +12,11 @@ export default class ToC extends React.Component {
     const { headings } = this.props;
 
     return (
-      <div className="col-md-3 toc">
+      <div className="toc">
         <div className="toc-wrapper">
           <div className="sidebar__body">
             <div className="sidebar__section">
+	
               {headings && headings.length > 0 && (
                 <React.Fragment>
                   <h3 className="sidebar__title sidebar__title--active">
@@ -30,14 +31,17 @@ export default class ToC extends React.Component {
                         </a>
                       </li>
                     ))}
-                  </ul>
+                  </ul> 
                 </React.Fragment>
               )}
+			   <ul>
+				  <li>cat</li>
+				  <li>dog</li>
+				  </ul>
             </div>
           </div>
         </div>
       </div>
-
     );
   }
 }
