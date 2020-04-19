@@ -91,7 +91,7 @@ class Sidebar extends React.Component {
 
   render() {
     return (
-      <div className="sidebar">
+	  <div className="col-md-2 sidebar">
         <div className="sidebar__wrapper">
           <div className="sidebar__body">
             {this.props.links.map((section, index) => (

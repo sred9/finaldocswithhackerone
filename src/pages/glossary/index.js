@@ -30,9 +30,9 @@ class IndexRoute extends React.Component {
     const allLetters = Object.keys(groupedByAlphabet);
 
     return (
-      <div className="glossary article">
+      <div className="row glossary article">
         <Helmet title={`Glossary | ${GatsbyConfig.siteMetadata.title}`} />
-        <div className="sidebar">
+        <div className="col-md-2 sidebar">
           <div className="sidebar__wrapper">
             <div className="sidebar__body">
               {allLetters.map((letter, index) => {
@@ -63,7 +63,7 @@ class IndexRoute extends React.Component {
           </div>
         </div>
 
-        <div className="article__inner">
+        <div className="col-md-7 article__inner">
           <h1>Glossary</h1>
           {edges.map((item, index) => {
             return (

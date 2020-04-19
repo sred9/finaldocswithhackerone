@@ -11,8 +11,6 @@ module.exports = {
     'gatsby-transformer-sharp',
     'gatsby-plugin-sitemap',
     'gatsby-plugin-layout',
-	`gatsby-plugin-catch-links`,
-		
     {
       resolve: 'gatsby-source-filesystem',
       options: {
@@ -26,21 +24,7 @@ module.exports = {
         hash: 'sha384'
       },
     },
-    {
-      resolve: `gatsby-plugin-csp`,
-      options: {
-        disableOnDev: true,
-        mergeScriptHashes: false,
-        mergeStyleHashes: false,
-        mergeDefaultDirectives: true,
-        directives: {
-          "script-src": "'self' 'unsafe-eval' 'unsafe-inline' www.google-analytics.com cdn.jsdelivr.net *.algolia.net *.algolianet.com",
-          "style-src": "'self' 'unsafe-inline' cdn.jsdelivr.net",
-          "connect-src": "'self' www.google-analytics.com fbhzv4f2nk7b.statuspage.io *.algolia.net *.algolianet.com",
-          "frame-src": "www.youtube-nocookie.com"
-        }
-      }
-    },
+
     {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
@@ -68,7 +52,7 @@ module.exports = {
               maxWidth: 500
             },
           },
-		  {
+		   {
           resolve: `gatsby-remark-prismjs`,
           options: {
             // Class prefix for <pre> tags containing syntax highlighting;
@@ -136,20 +120,6 @@ module.exports = {
         ],
       },
     },
-	{
-      resolve: `gatsby-plugin-webfonts`,
-      options: {
-        fonts: {
-          google: [
-            {
-              family: "Roboto",
-              variants: ["400", "500"],
-            },
-          ],
-        },
-      },
-    },
-	
     {
       resolve: 'gatsby-plugin-algolia-docsearch',
       options: {
@@ -158,11 +128,5 @@ module.exports = {
         inputSelector: "#algolia-doc-search",
       },
     },
-	{
-    resolve: `gatsby-plugin-canonical-urls`,
-    options: {
-      siteUrl: `csspoints.net`,
-    },
-  },
   ],
 };

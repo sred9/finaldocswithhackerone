@@ -4,9 +4,8 @@ import Footer from "../components/footer/footer";
 import { withPrefix } from "gatsby-link";
 import GatsbyConfig from "../../gatsby-config";
 
-import html from "../images/html-5.svg";
-import css from "../images/css-3.svg";
-import javascript from "../images/javascript.svg";
+import hackers from "../images/hackers.png";
+import programs from "../images/programs.png";
 
 const IndexPage = () => {
   return (
@@ -37,43 +36,35 @@ const IndexPage = () => {
           <div className="topics">
             <Topic url={withPrefix("/hackers.html")}>
               <img
-                src={html}
+                src={hackers}
                 width="44"
                 height="44"
                 alt="Hackers"
                 className="topic__image"
               />
               <div>
-                <h2>HTML</h2>
-             
+                <h2>Hackers</h2>
+                <p>
+                  Learn about the various features that'll improve your
+                  experience in finding and submitting vulnerabilities.
+                </p>
               </div>
             </Topic>
 
             <Topic url={withPrefix("/programs.html")}>
               <img
-                src={css}
+                src={programs}
                 width="44"
                 height="44"
                 alt="Programs"
                 className="topic__image"
               />
               <div>
-                <h2>CSS</h2>
-              
-              </div>
-            </Topic>
-			
-			            <Topic url={withPrefix("/programs.html")}>
-              <img
-                src={javascript}
-                width="44"
-                height="44"
-                alt="Programs"
-                className="topic__image"
-              />
-              <div>
-                <h2>Javascript</h2>
-              
+                <h2>Programs</h2>
+                <p>
+                  What you need to know about how our platform works and the
+                  services we offer.
+                </p>
               </div>
             </Topic>
           </div>

@@ -12,9 +12,9 @@ class IndexRoute extends React.Component {
     const { edges } = this.props.data.allMarkdownRemark;
 
     return (
-      <div className="changelog article">
+      <div className="row changelog article">
         <Helmet title={`Changelog | ${GatsbyConfig.siteMetadata.title}`} />
-        <div className="sidebar">
+        <div className="col-md-2 sidebar">
           <div className="sidebar__wrapper">
             <div className="sidebar__body">
               <ul className="sidebar__items sidebar__items--active">
@@ -32,7 +32,7 @@ class IndexRoute extends React.Component {
           </div>
         </div>
 
-        <div className="article__inner">
+        <div className="col-md-7 article__inner">
           <h1>Changelog</h1>
           <p>See what's changed or new in HackerOne.</p>
           {edges.map((item, index) => {
